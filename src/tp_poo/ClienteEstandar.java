@@ -2,8 +2,6 @@ package tp_poo;
 
 public class ClienteEstandar {
 
-	private int numeroDeTarjeta;
-	private double cuentaSueldo;
 	private String nombre;
 	private String apellido;
 	private String fechaDeNacimiento;
@@ -11,20 +9,20 @@ public class ClienteEstandar {
 	private String sexo;
 	private int claveCajero;
 	private int claveHomeBanking;
+	private int numeroDeTarjeta;
+	private double cuentaSueldo;
 
-	private ClienteEstandar(int numeroDeTarjeta, double cuentaSueldo, String nombre, String apellido,
+	// Nota: Posibilidad de ejecutar un cambio dentro del constructor
 
-			String fechaDeNacimiento, int dni, String sexo, int claveCajero, int claveHomeBanking) {
-		this.numeroDeTarjeta = numeroDeTarjeta;
-		this.cuentaSueldo = cuentaSueldo;
+	ClienteEstandar(String nombre, int dni) {
 		this.nombre = nombre;
-		this.apellido = apellido;
-		this.fechaDeNacimiento = fechaDeNacimiento;
 		this.dni = dni;
-		this.sexo = sexo;
-		this.claveCajero = claveCajero;
-		this.claveHomeBanking = claveHomeBanking;
-
+	}
+	
+	void altaClienteEstandar(ClienteEstandar clienteEstandar) {
+		System.out.println("Alta cliente realizada");
+		System.out.println("Nombre Cliente: " + nombre);
+		System.out.println("Apellido Cliente: " + dni);
 	}
 
 }

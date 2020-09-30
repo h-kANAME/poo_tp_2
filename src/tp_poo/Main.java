@@ -4,7 +4,9 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		System.out.println("Inicio");
+		ClienteEstandar Emmanuel = new ClienteEstandar("Emmanuel", 35233665);
+		
+		Emmanuel.altaClienteEstandar(Emmanuel);
 
 	}
 
