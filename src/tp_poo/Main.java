@@ -7,13 +7,18 @@ public class Main {
 	public static void main(String[] args) {
 
 		ClienteEstandar Emmanuel = new ClienteEstandar("Emmanuel", "Lopez", "18/06/90", 35233665, "Masculino",1310,
-				2020, 10.50, 1234567890);
+				2020, 10.50, 50.000, 1234567890);
 
-		Emmanuel.consultarDatosPersonales(Emmanuel);
-		System.out.println("");
-		Emmanuel.consultarSaldo(Emmanuel);
-		System.out.println("");
-		Emmanuel.retirarSueldo(Emmanuel);
+	//	Emmanuel.consultarDatosPersonales(Emmanuel);
+	//	System.out.println("");
+	//	Emmanuel.consultarSaldo(Emmanuel);
+	//	System.out.println("");
+	//	Emmanuel.retirarSueldo(Emmanuel);
+		
+	//	Emmanuel.solicitarCredito(Emmanuel);
+		
+		Emmanuel.invertidDinero(Emmanuel);
+		
 
 	}
 
