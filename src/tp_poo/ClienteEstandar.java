@@ -93,18 +93,18 @@ public class ClienteEstandar {
 				"Ingrese el monto que desea invertir, la modalidad vigente es plazo a 30 dias con un 3% de interes");
 		double importeInvertido = 0;
 		double importeInvertir = in.nextDouble();
-		
 
 		if (importeInvertir < cuentaSueldo) {
 
 			importeInvertido = importeInvertir * 1.03;
 			cuentaSueldo = cuentaSueldo - importeInvertir;
 
-			System.out
-					.println("Usted a invertido ARS " + importeInvertir + ", su saldo actual es de ARS " + cuentaSueldo);
-			System.out.println("Una vez transcurridos 30 dias, dispondra en su cuenta un total de ARS + " + importeInvertido);
+			System.out.println(
+					"Usted a invertido ARS " + importeInvertir + ", su saldo actual es de ARS " + cuentaSueldo);
+			System.out.println(
+					"Una vez transcurridos 30 dias, dispondra en su cuenta un total de ARS + " + importeInvertido);
 
-		}else {
+		} else {
 			System.out.println("No dispone de esa cantidad para invertir");
 		}
 
