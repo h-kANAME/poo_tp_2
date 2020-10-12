@@ -11,12 +11,8 @@ public class CuentaBancaria {
 
 	void verSaldo() {
 
-		System.out.println("El saldo es de ARS: " );
+		System.out.println("El saldo es de ARS: ");
 
-	}
-	
-	void retirarDinero() {
-		
 	}
 
 }

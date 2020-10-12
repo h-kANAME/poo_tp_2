@@ -18,6 +18,11 @@ public class AtencionPersonalizada {
 		this.legajo = legajo;
 	}
 
+	
+	void recibirClientePotencial(AtencionPersonalizada atencionPersonalizada) {
+		System.out.println("Accion de alta cliente");
+	}
+	
 	void recibirTicker() {
 
 		int ticket = rnd.nextInt(5);

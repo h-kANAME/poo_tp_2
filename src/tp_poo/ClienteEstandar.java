@@ -1,5 +1,6 @@
 package tp_poo;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class ClienteEstandar {
@@ -15,6 +16,7 @@ public class ClienteEstandar {
 	private int numeroDeTarjeta;
 
 	Scanner in = new Scanner(System.in);
+	Random rnd = new Random();
 
 	ClienteEstandar(String nombre, String apellido, String fechaDeNacimiento, int dni, String sexo, int claveCajero,
 			int claveHomeBanking, double cuentaSueldo, double lineaCrediticia, int numeroDeTarjeta) {
@@ -31,8 +33,12 @@ public class ClienteEstandar {
 
 	}
 
+	void ingresarSucursal(Sucursal sucursal) {
+		sucursal.estaAbieretaSucursal();
+	}
+
 	void consultarDatosPersonales(ClienteEstandar clienteEstandar) {
-		System.out.println("Datos del asociado:");
+		System.out.println("");
 		System.out.println("Nombre: " + nombre);
 		System.out.println("Apellido: " + apellido);
 		System.out.println("Fecha de nacimiento: " + fechaDeNacimiento);
@@ -87,6 +93,7 @@ public class ClienteEstandar {
 	}
 
 	void invertidDinero(ClienteEstandar clienteEstandar) {
+
 		System.out.println("Bienvenido " + nombre + " " + apellido + " usted dispone en su cuenta " + "ARS "
 				+ cuentaSueldo + " para invertir");
 		System.out.println(
@@ -108,6 +115,34 @@ public class ClienteEstandar {
 			System.out.println("No dispone de esa cantidad para invertir");
 		}
 
+	}
+
+	void usarTarjeta(ClienteEstandar clienteEstandar) {
+
+		int tipoDeUso = rnd.nextInt(3);
+		System.out.println("Prueba: " + tipoDeUso);
+		// Debito de un servicio //Pagar un comercio //Ingresar en cajero para..
+
+		if (tipoDeUso == 0) {
+			System.out.println("Se ha debitado el servicio satisfactoriamente");
+		} else if (tipoDeUso == 1) {
+			System.out.println("Has realizado el pago de tu compra con éxito");
+		} else if (tipoDeUso == 2) {
+			System.out.println("Problemas con el metodo retirar dinero");
+		} else {
+			return;
+		}
+
+	}
+
+	void usarCajeroAutomatico(ClienteEstandar clienteEstandar) {
+
+		// Ser o no ser
+	}
+
+	
+	public int getDni() {
+		return dni;
 	}
 
 }
