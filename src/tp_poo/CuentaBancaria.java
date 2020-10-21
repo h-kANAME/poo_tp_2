@@ -2,17 +2,29 @@ package tp_poo;
 
 public class CuentaBancaria {
 	private int numeroCuenta;
-	private String tipoCliente;
+	private double saldo;
 
-	CuentaBancaria(int numeroCuenta, String tipoCliente) {
+	CuentaBancaria(int numeroCuenta, double saldo) {
 		this.numeroCuenta = numeroCuenta;
-		this.tipoCliente = tipoCliente;
+		this.saldo = saldo;
 	}
 
-	void verSaldo() {
+	void retirarDinero() {
 
-		System.out.println("El saldo es de ARS: ");
-
+		
+	}
+	
+	void consultarSaldo() {
+		
+	}
+	
+	public int getNumeroCuenta() {
+		return this.numeroCuenta;
+		
+	}
+	
+	public double getSaldo() {
+		return this.saldo;
 	}
 
 }

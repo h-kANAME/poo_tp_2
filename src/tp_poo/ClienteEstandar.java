@@ -11,6 +11,7 @@ public class ClienteEstandar {
 	private int dni;
 	private String sexo;
 	private int claveCajero;
+	private CuentaBancaria cuenta;
 	private double cuentaSueldo;
 	private double lineaCrediticia;
 	private int numeroDeTarjeta;

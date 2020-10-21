@@ -11,10 +11,10 @@ public class ClienteEmpresas {
 	private int claveHomeBanking;
 	private double cuentaSueldo;
 	private int numeroDeTarjeta;
-	private int seguroEmpresas;
-	
+	private double cashBack;
+
 	ClienteEmpresas(String nombre, String apellido, String fechaDeNacimiento, int dni, String sexo, int claveCajero,
-			int claveHomeBanking, double cuentaSueldo, int numeroDeTarjeta, int seguroEmpresas) {
+			int claveHomeBanking, double cuentaSueldo, int numeroDeTarjeta, double cashBack) {
 
 		this.nombre = nombre;
 		this.apellido = apellido;
@@ -25,8 +25,31 @@ public class ClienteEmpresas {
 		this.claveHomeBanking = claveHomeBanking;
 		this.cuentaSueldo = cuentaSueldo;
 		this.numeroDeTarjeta = numeroDeTarjeta;
-		this.seguroEmpresas = seguroEmpresas;
+		this.cashBack = cashBack;
 
+	}
+
+	public double getCuentaSueldo() {
+		return cuentaSueldo;
+	}
+
+	public double getCashBack() {
+		return cashBack;
+	}
+
+	public void setCuentaSueldo(double cuentaSueldo) {
+		this.cuentaSueldo = cuentaSueldo;
+	}
+	
+	void consultarDatosPersonales(ClienteEmpresas clienteEmpresas) {
+		System.out.println("");
+		System.out.println("Nombre: " + nombre);
+		System.out.println("Apellido: " + apellido);
+		System.out.println("Fecha de nacimiento: " + fechaDeNacimiento);
+		System.out.println("DNI: " + dni);
+		System.out.println("Sexo: " + sexo);
+		System.out.println("Numero de tarjeta: " + numeroDeTarjeta);
+		System.out.println("CashBack disponible: " + cashBack);
 	}
 
 }
