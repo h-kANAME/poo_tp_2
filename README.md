@@ -1,19 +1,13 @@
-# poo_tp_2
-Segundo parcial
+# Trabajo practico - POO
 
-*Emmanuel: 
--Banco
--Sucursal
--Cuenta Bancaria
--Cliente Empresa
--Cliente Estandar
--Cliente Premium
--Atencion Personalizada
+_Flujo de un banco_
+
+## Desarrollo
+
+* [Ver Diagrama](https://drive.google.com/file/d/1XNkdZCWfIsXFkQ_kSHCjnFprh3j--mnm/view?usp=sharing/)
 
 
-*Ricardo: 
-  -Home Banking
-  -Recepcion Manual
-  -Recepcion Automatico
-  -Atencion Ventanilla
-  -Cajero Automatico
+## Autores
+
+* **Emmanuel Lopez**
+* **Ricardo Báez**
