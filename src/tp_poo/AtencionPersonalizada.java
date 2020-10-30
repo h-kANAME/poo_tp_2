@@ -39,11 +39,11 @@ public class AtencionPersonalizada {
 			int opcion = in.nextInt();
 			if (opcion == 1) {
 
-				ClienteEstandar Pedro = new ClienteEstandar("Pedro", "Rivas", "01/05/1987", 35233667, "Masculino", 1111,
+				ClienteEstandar pedro = new ClienteEstandar("Pedro", "Rivas", "01/05/1987", 35233667, "Masculino", 1111,
 						2222, 0, 15000, 123456789);
 				System.out.println("Cuenta creada con exito:");
 				System.out.println("");
-				Pedro.consultarDatosPersonales(Pedro);
+				pedro.consultarDatosPersonales(pedro);
 
 			} else {
 				System.out.println("De acuerdo, puede volver cuando desee, gracias por su visita.");

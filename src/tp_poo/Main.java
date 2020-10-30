@@ -12,13 +12,13 @@ public class Main {
 		Random rnd = new Random();
 		Scanner in = new Scanner(System.in);
 
-		Sucursal CasaCentral = new Sucursal(true, "Forest", 1, "Forest 1500");
-		ClienteEstandar Emmanuel = new ClienteEstandar("Emmanuel", "Lopez", "18/06/90", 35233665, "Masculino", 1310,
+		Sucursal casaCentral = new Sucursal(true, "Forest", 1, "Forest 1500");
+		ClienteEstandar emmanuel = new ClienteEstandar("Emmanuel", "Lopez", "18/06/90", 35233665, "Masculino", 1310,
 				2020, 10.50, 50.000, 1234567890);
 
-		RecepcionAutomatica AutoGestion = new RecepcionAutomatica(true, 1, 22, 0);
-		RecepcionManual GestionHumana = new RecepcionManual("Daniela", "Guzman", 14097951, 11000, 0);
-		AtencionPersonalizada Magdalena = new AtencionPersonalizada("Magdalena", "Carrizo", 35120759, 11);
+		RecepcionAutomatica autoGestion = new RecepcionAutomatica(true, 1, 22, 0);
+		RecepcionManual gestionHumana = new RecepcionManual("Daniela", "Guzman", 14097951, 11000, 0);
+		AtencionPersonalizada magdalena = new AtencionPersonalizada("Magdalena", "Carrizo", 35120759, 11);
 		// Magdalena.recibirTicker();
 
 		// Emmanuel.consultarDatosPersonales(Emmanuel);
@@ -30,15 +30,15 @@ public class Main {
 		// Emmanuel.invertidDinero(Emmanuel);
 		// Emmanuel.usarTarjeta(Emmanuel);
 
-		CasaCentral.estaAbieretaSucursal();
+		casaCentral.estaAbieretaSucursal();
 
-		if (CasaCentral.getEstadoSucursal() == false) {
-			System.out.println("La sucursal " + CasaCentral.getnombreSucursal() + " (Nº" + CasaCentral.getnumero()
+		if (casaCentral.getEstadoSucursal() == false) {
+			System.out.println("La sucursal " + casaCentral.getnombreSucursal() + " (Nº" + casaCentral.getnumero()
 					+ ") se encuentra cerrada.");
 
 		} else {
-			System.out.println("Bienvenido a sucursal " + CasaCentral.getnombreSucursal() + " (Nº"
-					+ CasaCentral.getnumero() + ").");
+			System.out.println("Bienvenido a sucursal " + casaCentral.getnombreSucursal() + " (Nº"
+					+ casaCentral.getnumero() + ").");
 
 			int accionCliente = rnd.nextInt(2);
 
@@ -51,10 +51,10 @@ public class Main {
 				if (proceso == 0) {
 					System.out.println("Conozco proceso, me dirijo a Recepcion Automatico");
 
-					AutoGestion.pedirDni(null);
+					autoGestion.pedirDni(null);
 
-					if (AutoGestion.getDniCliente() == Emmanuel.getDni()) {
-						Emmanuel.consultarDatosPersonales(Emmanuel);
+					if (autoGestion.getDniCliente() == emmanuel.getDni()) {
+						emmanuel.consultarDatosPersonales(emmanuel);
 						System.out.println("");
 						System.out.println(
 								"Por favor,ingrese una accion para conitnuar:\n Atencion Personalizada ingrese (1) \n Atencion Ventanilla ingrese (2)");
@@ -81,7 +81,7 @@ public class Main {
 						int accionCuenta = in.nextInt();
 						if (accionCuenta == 1) {
 
-							Magdalena.recibirClientePotencial(Magdalena);
+							magdalena.recibirClientePotencial(magdalena);
 
 						} else {
 							System.out.println("Consulta finalizada");
@@ -91,10 +91,10 @@ public class Main {
 				} else {
 					System.out.println("No conozco proceso, solicito atencion Recepcionista");
 
-					GestionHumana.pedirDni(null);
+					gestionHumana.pedirDni(null);
 
-					if (GestionHumana.getDniCliente() == Emmanuel.getDni()) {
-						Emmanuel.consultarDatosPersonales(Emmanuel);
+					if (gestionHumana.getDniCliente() == emmanuel.getDni()) {
+						emmanuel.consultarDatosPersonales(emmanuel);
 						System.out.println("");
 						System.out.println(
 								"Por favor,ingrese una accion para conitnuar:\n Atencion Personalizada ingrese (1) \n Atencion Ventanilla ingrese (2)");
@@ -121,7 +121,7 @@ public class Main {
 						int accionCuenta = in.nextInt();
 						if (accionCuenta == 1) {
 
-							Magdalena.recibirClientePotencial(Magdalena);
+							magdalena.recibirClientePotencial(magdalena);
 
 						} else {
 							System.out.println("Consulta finalizada");
