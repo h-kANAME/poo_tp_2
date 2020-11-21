@@ -13,6 +13,7 @@ public class ClienteEstandar {
 	private int claveCajero;
 	private CuentaBancaria cuenta;
 	private double cuentaSueldo;
+	private double cuentaDolares;
 	private double lineaCrediticia;
 	private int numeroDeTarjeta;
 
@@ -20,7 +21,7 @@ public class ClienteEstandar {
 	Random rnd = new Random();
 
 	ClienteEstandar(String nombre, String apellido, String fechaDeNacimiento, int dni, String sexo, int claveCajero,
-			int claveHomeBanking, double cuentaSueldo, double lineaCrediticia, int numeroDeTarjeta) {
+			double cuentaSueldo, double cuentaDolares, double lineaCrediticia, int numeroDeTarjeta) {
 
 		this.nombre = nombre;
 		this.apellido = apellido;
@@ -29,6 +30,7 @@ public class ClienteEstandar {
 		this.sexo = sexo;
 		this.claveCajero = claveCajero;
 		this.cuentaSueldo = cuentaSueldo;
+		this.cuentaDolares = cuentaDolares;
 		this.lineaCrediticia = lineaCrediticia;
 		this.numeroDeTarjeta = numeroDeTarjeta;
 
@@ -136,14 +138,27 @@ public class ClienteEstandar {
 
 	}
 
-	void usarCajeroAutomatico(ClienteEstandar clienteEstandar) {
+	/*
+	 * void usarCajeroAutomatico(ClienteEstandar clienteEstandar) {
+	 * 
+	 * // Ser o no ser }
+	 */
 
-		// Ser o no ser
+	public int getDni() {
+
+		return dni;
 	}
 
+	public int getClaveCajero() {
+		return claveCajero;
+	}
 	
-	public int getDni() {
-		return dni;
+	public double getCuentaDolares() {
+		return cuentaDolares;
+	}
+	
+	public double getCuentaSueldo() {
+		return cuentaSueldo;
 	}
 
 }
