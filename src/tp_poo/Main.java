@@ -51,13 +51,13 @@ public class Main {
 						break;
 
 					case 2:
-						double tipoDeCambio = 85.5;
+						double tipoDeCambioCompra = 85.5;
 						System.out.println(
 								"Usted ha decidido realizar una compra en dolares, el tipo de cambio a la fecha es: "
-										+ tipoDeCambio + "\nPor favor ingrese la cantidad que desea comprar");
+										+ tipoDeCambioCompra + "\nPor favor ingrese la cantidad que desea comprar");
 						
 						double importeComprar = in.nextDouble();
-						double comprobarSaldo = tipoDeCambio * importeComprar;
+						double comprobarSaldo = tipoDeCambioCompra * importeComprar;
 						System.out.println("Saldo en pesos actual de su cuenta: ARS " + emmanuel.getCuentaSueldo());
 						System.out.println("Se descontaran de su cuenta: ARS " + comprobarSaldo);
 
@@ -70,6 +70,31 @@ public class Main {
 									+ saldoActualizadoEnPesos);
 						}
 
+						break;
+						
+					case 3: 
+						double tipoDeCambioVenta = 79.50;
+						System.out.println(
+								"Usted ha decidido realizar una venta de dolares, el tipo de cambio a la fecha es: "
+										+ tipoDeCambioVenta + "\nPor favor ingrese la cantidad que desea vener");
+						
+						double importeVender = in.nextDouble();
+						double comprobarVenta = emmanuel.getCuentaDolares() - importeVender;
+						
+						System.out.println("Saldo en dolares actual de su cuenta: USD " + emmanuel.getCuentaDolares());
+						System.out.println("Se descontaran de su cuenta: USD  " + importeVender);
+						
+						if (importeVender > emmanuel.getCuentaDolares()) {
+							System.out.println("No tiene saldo suficiente para vender esa cantidad");
+						} else {
+							double saldoActualizadoEnDolares = emmanuel.getCuentaDolares() - importeVender;
+							System.out.println("Venta realizada con exito\nSaldo actual en dolares: "
+									+ saldoActualizadoEnDolares);
+							double saldoActualizadoEnPesos = importeVender * tipoDeCambioVenta;
+							saldoActualizadoEnPesos = saldoActualizadoEnPesos + emmanuel.getCuentaSueldo();
+							System.out.println("Saldo actual en pesos: " + saldoActualizadoEnPesos);
+						}
+						
 					default:
 						break;
 					}
